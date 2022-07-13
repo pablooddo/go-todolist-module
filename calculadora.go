@@ -2,7 +2,7 @@ package todolist
 
 import "fmt"
 
-type todoList struct {
+type TodoList struct {
 	lista []*todoItem
 }
 
