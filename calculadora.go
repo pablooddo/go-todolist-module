@@ -3,10 +3,10 @@ package todolist
 import "fmt"
 
 type TodoList struct {
-	lista []*todoItem
+	lista []*TodoItem
 }
 
-func (tl *TodoList) Add(t *todoItem) {
+func (tl *TodoList) Add(t *TodoItem) {
 	tl.lista = append(tl.lista, t)
 }
 
@@ -14,17 +14,17 @@ func (tl *TodoList) Remove(index int) {
 	tl.lista = append(tl.lista[:index], tl.lista[index+1:]...)
 }
 
-type todoItem struct {
+type TodoItem struct {
 	name        string
 	description string
 	done        bool
 }
 
-func (t *todoItem) markAsDone() {
+func (t *TodoItem) markAsDone() {
 	t.done = true
 }
 
-func show(tl TodoList) {
+func Show(tl TodoList) {
 	fmt.Println("")
 	fmt.Println("---------------")
 	for index, t := range tl.lista {
