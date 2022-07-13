@@ -6,11 +6,11 @@ type TodoList struct {
 	lista []*todoItem
 }
 
-func (tl *todoList) Add(t *todoItem) {
+func (tl *TodoList) Add(t *todoItem) {
 	tl.lista = append(tl.lista, t)
 }
 
-func (tl *todoList) Remove(index int) {
+func (tl *TodoList) Remove(index int) {
 	tl.lista = append(tl.lista[:index], tl.lista[index+1:]...)
 }
 
@@ -24,7 +24,7 @@ func (t *todoItem) markAsDone() {
 	t.done = true
 }
 
-func show(tl todoList) {
+func show(tl TodoList) {
 	fmt.Println("")
 	fmt.Println("---------------")
 	for index, t := range tl.lista {
