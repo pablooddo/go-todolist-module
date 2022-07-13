@@ -6,11 +6,11 @@ type todoList struct {
 	lista []*todoItem
 }
 
-func (tl *todoList) add(t *todoItem) {
+func (tl *todoList) Add(t *todoItem) {
 	tl.lista = append(tl.lista, t)
 }
 
-func (tl *todoList) remove(index int) {
+func (tl *todoList) Remove(index int) {
 	tl.lista = append(tl.lista[:index], tl.lista[index+1:]...)
 }
 
